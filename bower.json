@@ -1,0 +1,34 @@
+{
+  "name": "peregrin",
+  "private": true,
+  "description": "Controla a autorização de acesso na aplicação cliente.",
+  "moduleType": "amd",
+  "authors": [
+    "Charles viegas <charles.viegas@codate.com.br>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlesviegas/peregrin.git"
+  },
+  "main": [
+    "./dist/peregrin.js"
+  ],
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "~1.4.x",
+    "requirejs": "2.1.x",
+    "jquery": "~2.1.4"
+  },
+  "ignore": [
+    ".eslintrc.json",
+    ".gitignore",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json",
+    "README.md",
+    "vendor",
+    "test",
+    "tasks",
+    "src"
+  ]
+}
