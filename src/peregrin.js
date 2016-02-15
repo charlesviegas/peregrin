@@ -1,4 +1,18 @@
-angular.module('peregrin',[])
+angular.module('peregrin', [])
+
+    .config(['$httpProvider', function ($httpProvider) {
+
+        $httpProvider.interceptors.push(function () {
+            return {
+                request: function (config) {
+                    var header = angular.element(document).find('meta[name="_csrf_header"]').attr('content');
+                    var token = angular.element(document).find('meta[name="_csrf"]').attr('content');
+                    config.headers[header] = token;
+                    return config;
+                }
+            };
+        });
+    }])
 
     .service('peService', function () {
 
